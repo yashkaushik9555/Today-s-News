@@ -143,18 +143,17 @@ export default class News extends Component {
             <>
             <div className="container">
             <div className="row">
-              {this.state.articles.map((element, index) => (
-                <div key={index} className="col-md-3">
-                  <NewsItems
-                    title={element.title ? element.title.slice(0, 45) : ' '}
-                    description={element.description ? element.description : 'error '}
-                    imgurl={element.urlToImage ? element.urlToImage : 'Image not found '}
-                    date={element.publishedAt ? element.publishedAt : ' '}
-                    url={element.url ? element.url : 'Nothing to Read More '}
-                  />
-                </div>
-                
-              ))}
+            {this.state.articles.map((element, index) => (
+  <div key={index} className="col-md-3">
+    <NewsItems
+      title={element?.title?.slice(0, 45) || ' '}
+      description={element.description ? element.description : 'error '}
+      imgurl={element.urlToImage ? element.urlToImage : 'Image not found '}
+      date={element.publishedAt ? element.publishedAt : ' '}
+      url={element.url ? element.url : 'Nothing to Read More '}
+    />
+  </div>
+))}
             </div>
             </div>
             </>
