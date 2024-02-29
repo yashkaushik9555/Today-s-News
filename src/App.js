@@ -29,7 +29,7 @@ export default class App extends Component {
       />
       <div className="container">
         <Routes>
-          <Route exact  path="/" element={ <News setProgress={this.setProgress} apiKey={this.apiKey} key="top-headlines" pagesize={this.pagesize} country={this.props.country} category={'general'}/>}/>
+          <Route exact  path="/home" element={ <News setProgress={this.setProgress} apiKey={this.apiKey} key="top-headlines" pagesize={this.pagesize} country={this.props.country} category={'general'}/>}/>
           <Route exact path="/business" element={ <News setProgress={this.setProgress} apiKey={this.apiKey} key= 'business' pagesize={this.pagesize} country={this.props.country} category={'business'}/>}/>
           <Route exact path="/entertainment" element={ <News setProgress={this.setProgress} apiKey={this.apiKey} key='entertainment' pagesize={this.pagesize} country={this.props.country} category={'entertainment'}/>}/>
           <Route exact path="/general" element={ <News setProgress={this.setProgress} apiKey={this.apiKey} key='general' pagesize={this.pagesize} country={this.props.country} category={'general'}/>}/>
